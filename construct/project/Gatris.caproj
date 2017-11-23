@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Gatris</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>23jeh4qyrmqr8</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+    </used-plugins>
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>240</width>
+        <height>160</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="System">
+            <object-type name="Browser" sid="394634761595696">
+                <plugin id="Browser" />
+            </object-type>
+            <object-type name="Keyboard" sid="509683704401973">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Function" sid="953278198724833">
+                <plugin id="Function" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Block">
+            <object-type name="cuadrao" sid="894584677975150">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656091004228628" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\C\Desktop\gatris\cuadrao.png">
+                            <collision-poly>
+                                <point x="0.0588235" y="0.0588235" />
+                                <point x="0.941176" y="0.0588235" />
+                                <point x="0.941176" y="0.941176" />
+                                <point x="0.0588235" y="0.941176" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="I" sid="678382146412893">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="397248477982690" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\C\Desktop\gatris\I.png">
+                            <collision-poly>
+                                <point x="0.030303" y="0.111111" />
+                                <point x="0.969697" y="0.111111" />
+                                <point x="1" y="0.444444" />
+                                <point x="0.969697" y="0.888889" />
+                                <point x="0.030303" y="0.888889" />
+                                <point x="0" y="0.444444" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="L" sid="288019067720080">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373934133399420" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\C\Desktop\gatris\L.png">
+                            <collision-poly>
+                                <point x="0.529412" y="0.36" />
+                                <point x="0.470588" y="0.04" />
+                                <point x="0.941176" y="0.04" />
+                                <point x="1" y="0.48" />
+                                <point x="0.941176" y="0.96" />
+                                <point x="0.0588235" y="0.96" />
+                                <point x="0.470588" y="0.48" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="L2" sid="193555160916235">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="663876700569121" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\C\Desktop\gatris\L2.png">
+                            <collision-poly>
+                                <point x="0.0588235" y="0.04" />
+                                <point x="0.470588" y="0.04" />
+                                <point x="0.470588" y="0.36" />
+                                <point x="0.529412" y="0.48" />
+                                <point x="0.941176" y="0.96" />
+                                <point x="0.0588235" y="0.96" />
+                                <point x="0" y="0.48" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="S" sid="276644845941719">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="477566060465115" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\C\Desktop\gatris\S2.png">
+                            <collision-poly>
+                                <point x="0.04" y="0.0588235" />
+                                <point x="0.48" y="0" />
+                                <point x="0.64" y="0.529412" />
+                                <point x="0.96" y="0.470588" />
+                                <point x="0.96" y="0.941176" />
+                                <point x="0.48" y="1" />
+                                <point x="0.36" y="0.470588" />
+                                <point x="0.04" y="0.470588" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="S2" sid="739381049540618">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="403680207893661" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\C\Desktop\gatris\S.png">
+                            <collision-poly>
+                                <point x="0.36" y="0.529412" />
+                                <point x="0.48" y="0" />
+                                <point x="0.96" y="0.0588235" />
+                                <point x="0.96" y="0.470588" />
+                                <point x="0.64" y="0.470588" />
+                                <point x="0.48" y="1" />
+                                <point x="0.04" y="0.941176" />
+                                <point x="0.04" y="0.470588" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="T" sid="868628150514407">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904508867164050" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\C\Desktop\gatris\T.png">
+                            <collision-poly>
+                                <point x="0.04" y="0.0588235" />
+                                <point x="0.48" y="0" />
+                                <point x="0.96" y="0.0588235" />
+                                <point x="0.96" y="0.470588" />
+                                <point x="0.64" y="0.470588" />
+                                <point x="0.48" y="1" />
+                                <point x="0.36" y="0.470588" />
+                                <point x="0.04" y="0.470588" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="Background" sid="563549784461051">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\C\Desktop\gatris\cuadrao.png" />
+            <tiles />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="Block" plugin-id="Sprite" sid="464197710987213">
+            <members>
+                <member>cuadrao</member>
+                <member>I</member>
+                <member>L</member>
+                <member>L2</member>
+                <member>S</member>
+                <member>S2</member>
+                <member>T</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Game.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Game.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="2" />
+        <global-instance type="Function" uid="3" />
+        <global-instance type="Browser" uid="0" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

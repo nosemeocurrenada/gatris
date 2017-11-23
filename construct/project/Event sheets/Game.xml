@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game</name>
+    <events>
+        <event-block sid="287169693884007">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="462441112895357" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="967103671511966">
+                    <conditions>
+                        <condition id="-10" name="For" sid="705947869092450" type="System">
+                            <param id="0" name="Name">&quot;tileX&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">9</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="465939152476762">
+                            <conditions>
+                                <condition id="-10" name="For" sid="858697952279230" type="System">
+                                    <param id="0" name="Name">&quot;tileY&quot;</param>
+                                    <param id="1" name="Start index">0</param>
+                                    <param id="2" name="End index">19</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set tile" sid="266195794858538" type="Background">
+                                    <param id="0" name="Tile X">loopindex(&quot;tileX&quot;)</param>
+                                    <param id="1" name="Tile Y">loopindex(&quot;tileY&quot;)</param>
+                                    <param id="2" name="Tile">0</param>
+                                    <param id="3" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="919050168034619">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="592341532300805" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="193759199523631" type="Function">
+                    <param id="0" name="Name">&quot;Block.MoveLeft&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="511204931893191">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="397391565845968" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="560604657716263" type="Function">
+                    <param id="0" name="Name">&quot;Block.MoveRight&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="417028721242083">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="503001360307176" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="417118222689052" type="Function">
+                    <param id="0" name="Name">&quot;Block.MoveDown&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="139540018699034">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="989101035811236" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="853491585594677" type="Function">
+                    <param id="0" name="Name">&quot;Block.MoveUp&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="859432244474970">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="864953452387325" type="Keyboard">
+                    <param id="0" name="Key">90 (Z)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="206451667773638" type="Function">
+                    <param id="0" name="Name">&quot;Block.RotateLeft&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="389179482347234">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="141178909945411" type="Keyboard">
+                    <param id="0" name="Key">88 (X)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="734861851023609" type="Function">
+                    <param id="0" name="Name">&quot;Block.RotateRight&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="302120912362016">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="232525612113861" type="Keyboard">
+                    <param id="0" name="Key">81 (Q)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="452451689051657" type="Function">
+                    <param id="0" name="Name">&quot;Block.CreateBlock&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="959797926001337" title="Block">
+            <sub-events>
+                <variable comment="uid" constant="0" name="activeBlock" sid="246045360407984" static="1" type="number">0</variable>
+                <variable constant="0" name="startX" sid="987719149259575" static="0" type="number">130</variable>
+                <variable constant="0" name="startY" sid="432347683548012" static="0" type="number">12</variable>
+                <variable constant="0" name="moveSizeX" sid="401597202836792" static="0" type="number">8</variable>
+                <variable constant="0" name="moveSizeY" sid="528708023762180" static="0" type="number">8</variable>
+                <event-block sid="446005498054438">
+                    <conditions>
+                        <condition id="0" name="On function" sid="555149143501375" type="Function">
+                            <param id="0" name="Name">&quot;Block.CreateBlock&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="341031545439303" type="System">
+                            <param id="0" name="Object to create">Block</param>
+                            <param id="1" name="Layer">&quot;Block&quot;</param>
+                            <param id="2" name="X">startX</param>
+                            <param id="3" name="Y">startY</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="321598457781904" type="System">
+                            <param id="0" name="Variable">activeBlock</param>
+                            <param id="1" name="Value">Block.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="484705348561979">
+                    <conditions>
+                        <condition id="0" name="On function" sid="154400719561852" type="Function">
+                            <param id="0" name="Name">&quot;Block.MoveDown&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="761522486692228" type="Block">
+                            <param id="0" name="Unique ID">activeBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="159550137116281" type="Block">
+                            <param id="0" name="Y">self.Y + moveSizeY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="276207298169524">
+                    <conditions>
+                        <condition id="0" name="On function" sid="756101779830076" type="Function">
+                            <param id="0" name="Name">&quot;Block.MoveUp&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="230314837896001" type="Block">
+                            <param id="0" name="Unique ID">activeBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="722607380835493" type="Block">
+                            <param id="0" name="Y">self.Y - moveSizeY</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="792305762779483">
+                    <conditions>
+                        <condition id="0" name="On function" sid="636332060050106" type="Function">
+                            <param id="0" name="Name">&quot;Block.MoveLeft&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="670517427218063" type="Block">
+                            <param id="0" name="Unique ID">activeBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="134276432673785" type="Block">
+                            <param id="0" name="X">self.X - moveSizeX</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="971544642436248">
+                    <conditions>
+                        <condition id="0" name="On function" sid="277429601548009" type="Function">
+                            <param id="0" name="Name">&quot;Block.MoveRight&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="199505262432099" type="Block">
+                            <param id="0" name="Unique ID">activeBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="346166247355509" type="Block">
+                            <param id="0" name="X">self.X + moveSizeX</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="533242460455060">
+                    <conditions>
+                        <condition id="0" name="On function" sid="334935916492583" type="Function">
+                            <param id="0" name="Name">&quot;Block.RotateRight&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="189559811540704" type="Block">
+                            <param id="0" name="Unique ID">activeBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Rotate clockwise" sid="743113574169767" type="Block">
+                            <param id="0" name="Degrees">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="373474038627086">
+                    <conditions>
+                        <condition id="0" name="On function" sid="886566626887479" type="Function">
+                            <param id="0" name="Name">&quot;Block.RotateLeft&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="629011382327597" type="Block">
+                            <param id="0" name="Unique ID">activeBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-19" name="Rotate counter-clockwise" sid="472539501496709" type="Block">
+                            <param id="0" name="Degrees">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="498305542326954">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="943502025802882" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="131989522036747" type="Block" />
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="554769066866160">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="740290766244667" type="Block">
+                            <param id="0" name="Object">Block</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="255071084919331" type="Block">
+                            <param id="0" name="Unique ID">activeBlock</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="335958622918484" type="Function">
+                            <param id="0" name="Name">&quot;Block.MoveUp&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
